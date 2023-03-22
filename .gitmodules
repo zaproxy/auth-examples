@@ -1,3 +1,6 @@
 [submodule "JWT-simpleauth"]
 	path = JWT-simpleauth
 	url = https://github.com/AliAbdollahiii/JWT-simpleauth.git
+[submodule "1simpleauth"]
+	path = 1simpleauth
+	url = https://github.com/AliAbdollahiii/1simpleauth.git

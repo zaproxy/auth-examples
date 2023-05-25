@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class="flashes">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+<form method="POST">
+    <label>Username</label>
+    <input type="text" name="username" required>
+    <br>
+    <label>Password</label>
+    <input type="password" name="password" required>
+    <br>
+    <label>Region</label>
+    <select name="region">
+        {% for r in regions %}
+        <option value="{{ r }}" {% if r == region %}selected{% endif %}>{{ r }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <input type="checkbox" name="remember" {% if remember %}checked{% endif %}>
+    <label>Remember me</label>
+    <br>
+    <label>Language</label>
+    <select name="language">
+        {% for l in languages %}
+        <option value="{{ l }}" {% if l == language %}selected{% endif %}>{{ l }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <button type="submit">Login</button>
+</form>
+</body>
+</html>

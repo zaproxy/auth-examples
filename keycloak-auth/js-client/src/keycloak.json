@@ -1,0 +1,8 @@
+{
+    "realm": "zaproxy",
+    "auth-server-url": "https://auth.keepsecure.io/",
+    "ssl-required": "external",
+    "resource": "zaproxy-js-client",
+    "public-client": true,
+    "confidential-port": 0
+  }

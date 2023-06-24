@@ -1,0 +1,1 @@
+docker run -i -t -p 5577:80 -v ./src:/usr/local/apache2/htdocs/ httpd:alpine
